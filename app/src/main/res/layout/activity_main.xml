@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+   <TextView
+       android:text="MÁY TÍNH CÁ NHÂN ĐƠN GIẢN"
+       android:id="@+id/maytinhcanhan"
+       android:layout_marginTop="20dp"
+       android:textColor="@color/colorPrimaryDark"
+       android:textSize="20sp"
+       android:layout_centerHorizontal="true"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/ketqua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nhapsoB"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:hint="kết quả"
+        android:textSize="40sp" />
+
+    <EditText
+        android:hint="nhập số A"
+        android:id="@+id/nhapsoA"
+        android:layout_below="@+id/maytinhcanhan"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:hint="nhập số B"
+        android:id="@+id/nhapsoB"
+        android:layout_below="@+id/nhapsoA"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/phepcong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nhapsoB"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="+"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/pheptru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phepcong"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:text="-"
+        android:textSize="50sp" />
+    <Button
+        android:id="@+id/phepnhan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nhapsoB"
+        android:layout_marginTop="50dp"
+android:layout_marginLeft="300dp"
+        android:text="*"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/phepchia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phepnhan"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="300dp"
+        android:text="/"
+        android:textSize="50sp" />
+    <Button
+        android:id="@+id/random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="RANDOM"
+        android:textSize="30sp" />
+</RelativeLayout>
