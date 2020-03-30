@@ -3,9 +3,12 @@ package com.example.maytinhcanhan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.renderscript.Sampler;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 TextView mmaytinhcanhan, mketqua;
@@ -27,5 +30,69 @@ EditText MnhapsoA, MnhapsoB;
         btnphepchia = (Button)findViewById(R.id.phepchia);
         btnRandom = (Button)findViewById(R.id.random);
 
+        btnphepcong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nhapsoa = MnhapsoA.getText().toString();
+                int soa = Integer.parseInt(nhapsoa);
+                String nhapsob = MnhapsoB.getText().toString();
+                int sob = Integer.parseInt(nhapsob);
+
+                int soab = soa + sob;
+                mketqua.setText( String.valueOf(soab));
+
+            }
+        });
+        btnpheptru.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String chuoisoa = MnhapsoA.getText().toString();
+                int soa = Integer.parseInt(chuoisoa);
+                String chuoisob = MnhapsoB.getText().toString();
+                int sob = Integer.parseInt(chuoisob);
+                int soab = soa - sob;
+                if (soa <= sob) {
+                    Toast.makeText(MainActivity.this, "Bạn nhập sai số",Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    mketqua.setText(String.valueOf(soab));
+
+                }
+
+            }
+        });
+        btnphepnhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String chuoia = MnhapsoA.getText().toString();
+                int soa = Integer.parseInt(chuoia);
+                String chuoib = MnhapsoB.getText().toString();
+                int sob = Integer.parseInt(chuoib);
+                int soab = soa * sob;
+                mketqua.setText(String.valueOf(soab));
+            }
+        });
+        btnphepchia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String chuoia = MnhapsoA.getText().toString();
+                int soa = Integer.parseInt(chuoia);
+                String chuoib = MnhapsoB.getText().toString();
+                int sob = Integer.parseInt(chuoib);
+                int soab = soa / sob;
+                if (soa < sob) {
+                    Toast.makeText(MainActivity.this,"Chia không được, nhập lại đi bạn", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    mketqua.setText(String.valueOf(soab));
+                }
+            }
+        });
+        btnRandom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }
